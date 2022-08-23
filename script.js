@@ -1,16 +1,19 @@
 const button = document.querySelector('.button');
 
-button.addEventListener('click', () => {
-  const firstValue = +prompt('введите число');
-
-  const secondValue = +prompt(
-    'введите число, которое не меньше 2 и не больше 36, равное системе счисления, к которой ходите привести первое число'
-  );
-
-  if (Number.isNaN(firstValue) || Number.isNaN(secondValue) || secondValue < 2 || secondValue > 36) {
+const calculation = () => {
+  const firstValue = +prompt('Введите первое число');
+  if (Number.isNaN(+firstValue)) {
     console.log('Некорректный ввод!');
     return;
   }
 
-  console.log(firstValue.toString(secondValue));
-});
+  const secondValue = +prompt('Введите второе число');
+  if (Number.isNaN(+secondValue)) {
+    console.log('Некорректный ввод!');
+    return;
+  }
+
+  console.log(`Ответ: ${firstValue + secondValue}, ${firstValue / secondValue}.`);
+};
+
+button.addEventListener('click', calculation);
