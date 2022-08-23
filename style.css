@@ -1,0 +1,28 @@
+body {
+  background-color: gray;
+  color: #fff;
+}
+
+.title {
+  margin-top: 40vh;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.button {
+  color: #fff;
+  border: none;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  background-color: #ff0033;
+  display: block;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #900020;
+}
